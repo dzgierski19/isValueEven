@@ -1,12 +1,10 @@
-function isValueEven(number) {
+const isValueEven = (number) => {
   isInputNumber(number);
-  isInputAnInteger(number);
-  isInputZero(number);
   if (number % 2 === 0) {
     return true;
   }
   return false;
-}
+};
 
 isInputNumber = (input) => {
   if (typeof input !== "number" || isNaN(input) === true) {
@@ -14,17 +12,5 @@ isInputNumber = (input) => {
   }
 };
 
-isInputAnInteger = (input) => {
-  if (Number.isInteger(input) === false) {
-    throw new Error("You must not type an integer");
-  }
-};
-
-isInputZero = (input) => {
-  if (input === 0) {
-    throw new Error("You must not type 0");
-  }
-};
-
-const result1 = isValueEven(-33);
+const result1 = isValueEven(0);
 console.log(result1);
