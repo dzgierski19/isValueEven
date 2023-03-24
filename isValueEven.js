@@ -6,7 +6,7 @@ const isValueEven = (number) => {
   return false;
 };
 
-isInputNumber = (input) => {
+const isInputNumber = (input) => {
   if (typeof input !== "number" || isNaN(input) === true) {
     throw new Error("You must type number");
   }
