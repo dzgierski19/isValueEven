@@ -1,7 +1,16 @@
-function isEvenValue(number) {
-  if (number / 2 === 1) {
+const isValueEven = (number) => {
+  isInputNumber(number);
+  if (number % 2 === 0) {
     return true;
-  } else {
-    return false;
   }
-}
+  return false;
+};
+
+const isInputNumber = (input) => {
+  if (typeof input !== "number" || isNaN(input) === true) {
+    throw new Error("You must type number");
+  }
+};
+
+const result1 = isValueEven(0);
+console.log(result1);
